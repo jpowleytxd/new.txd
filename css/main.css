@@ -54,12 +54,20 @@ header{
   background: #393D58;
 }
 
-.prod-items{
+.prod-nav-container{
+  width: 20%;
+  height: inherit;
+  position: relative;
+  float: left;
+}
+
+.prod-nav-items{
   width: 150px;
+  height: auto;
   position: absolute;
-  top: 100px;
+  top: calc((80vh - 600px) / 2);
   right: 0;
-  margin-right: 30px;
+  margin-right: 10px;
 }
 
 .prod-nav-item{
@@ -68,7 +76,7 @@ header{
   position: relative;
   float: left;
   padding-top: 40px;
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
   color: #fff;
   line-height: 50px;
@@ -81,26 +89,14 @@ header{
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  background: url("media/img/mobile.svg") no-repeat fixed center;
-  background-sise: cover;
-}
-
-
-
-.prod-nav-container{
-  width: 20%;
-  height: 100vh;
-  position: relative;
-  float: left;
-  background: #393D58;
 }
 
 .prod-nav-bar{
   width: 5px;
-  height: 100vh;
+  height: inherit;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0px;
+  right: 0px;
   background: rgb(37, 41, 68);
 }
 
@@ -108,9 +104,35 @@ header{
   width: 5px;
   height: 150px;
   position: relative;
-  top: 100px;
+  top: calc((80vh - 600px) / 2);
   background: #00C389;
 }
+
+/* Icon pack */
+@font-face {
+	font-family: 'Glyphter';
+	src: url('../media/fonts/Glyphter.eot');
+	src: url('../media/fonts/Glyphter.eot?#iefix') format('embedded-opentype'),
+	     url('../media/fonts/Glyphter.woff') format('woff'),
+	     url('../media/fonts/Glyphter.ttf') format('truetype'),
+	     url('../media/fonts/Glyphter.svg#Glyphter') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+[class*='prod-icon']:before {
+	display: inline-block;
+	font-family: 'Glyphter';
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	font-size: 50px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale
+}
+#prod-campaigns-icon:before{content:'\0042';}
+#prod-loyalty-icon:before{content:'\0043';}
+#prod-mobile-icon:before{content:'\0044';}
+#prod-scv-icon:before{content:'\0045';}
 
 .clients{
   width: 100%;
