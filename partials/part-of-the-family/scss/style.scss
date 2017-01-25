@@ -1,0 +1,91 @@
+$green: #00c389;
+$blue: #3a3d57;
+$white: #fff;
+
+@mixin bg-opacity($color, $opacity: 0.3) {
+    background: $color;
+    background: rgba($color, $opacity);
+}
+
+html,
+body {
+	font-family: 'Dosis', sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'Dosis', sans-serif;
+	&:active,
+	&:focus {
+		outline: none;
+	}
+}
+
+.footer {
+	text-align: center;
+	min-height: 100vh;
+	bottom: 0;
+	position: relative;
+	overflow: hidden;
+	button {
+		padding: 10px 15px;
+		background: transparent;
+		border: 2px solid $green;
+		font-family: 'Dosis', sans-serif;
+		font-size: 16px;
+		color: $green;
+		cursor: pointer;
+		&.zonal-family-button {
+			position: absolute;
+			bottom: 50px;
+			left: 50%;
+			transform: translate(-50%);
+			text-transform: uppercase;
+		}
+		&:hover, &.active {
+			background: $green;
+			color: $white;
+		}
+	}
+	.zonal-family-panel {
+		width: 100%;
+		max-width: 600px;
+		background: $blue url(http://img2.email2inbox.co.uk/2017/txd/zonal-family-bg.jpg);
+		height: 0;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%);
+		overflow: hidden;
+		&.active {
+			@media screen and (max-width: 480px) {
+				height: 100vh !important;
+			}
+		}
+		.inner {
+			@include bg-opacity(#07384c, 0.9);
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			.zonal-logo {
+				transform: translate(0,-120px);
+			}
+			.copy {
+				opacity: 0;
+				p {
+					padding: 20px 80px;
+					color: $white;
+					line-height: 2;
+					@media screen and (max-width: 480px) {
+						padding: 20px 40px;
+					}
+					a {
+						color: $green;
+					}
+				}
+			}
+		}
+	}
+}

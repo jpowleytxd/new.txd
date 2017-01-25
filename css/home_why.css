@@ -1,0 +1,230 @@
+/*----------*/
+/*Why Section styling*/
+/*----------*/
+
+.why-txd {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  float: left;
+  z-index: 1;
+  background: #C3C3B9;
+}
+
+.why-title {
+  width: 100%;
+  height: 80vh;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgba(0, 0, 0, 0.1);
+  font-size: 200px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 80vh;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.why-container {
+  width: 90%;
+  height: 60vh;
+  z-index: 3;
+  display: block;
+  position: relative;
+  margin-top: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+.why-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.why-button-container {
+  width: 10%;
+  height: 60vh;
+  z-index: 1000;
+  display: block;
+  position: relative;
+  float: left;
+  color: #393D58;
+  font-size: 200px;
+  font-weight: 100;
+  text-align: center;
+  line-height: 60vh;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  user-select: none;
+}
+
+.why-button-container:hover {
+  color: #00c389;
+  cursor: pointer;
+}
+
+.why-selection-container {
+  width: 80%;
+  height: 60vh;
+  display: block;
+  position: relative;
+  float: left;
+  overflow: visible;
+}
+
+.why-group {
+  width: 100%;
+  height: 60vh;
+  display: block;
+  position: relative;
+  float: left;
+}
+
+.why-image {
+  width: 100%;
+  height: 45vh;
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.why-image img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 50vh;
+}
+
+#bulb{max-height: 40vh;}
+#glow{position: absolute; top: 46%;}
+#epos{max-height: 100%;}
+
+
+.why-text {
+  width: 100%;
+  height: 20vh;
+  display: block;
+  position: relative;
+  color: #393D58;
+  text-align: center;
+}
+
+.why-text h4 {
+  width: 70%;
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.why-text p {
+  width: 70%;
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.owl-item {
+  float: left;
+}
+
+.owl-nav {
+  display: none !important;
+}
+
+.next {
+  display: block;
+  cursor: pointer;
+  z-index: 9999;
+  position: absolute;
+}
+
+@media screen and (max-width: 1000px){
+  .why-title{
+    font-size: 125px;
+  }
+  .why-container{
+    width: 90%;
+  }
+
+  #glow{position: absolute; top: 42%;}
+  #epos{max-width: 70%;}
+}
+
+@media screen and (max-width: 640px){
+  .why-txd {
+    height: 100vh;
+  }
+
+  .why-title {
+    display: none;
+  }
+
+  .why-container {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .why-container img {
+  }
+
+  .why-button-container {
+    height: 10vh;
+    position: absolute;
+    bottom: 1vw;
+    font-size: 70px;
+    font-weight: 400;
+    line-height: 8vh;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    user-select: none;
+    background: rgba(255, 255, 255, 0.2);
+    width: 48.5%;
+  }
+
+  #why-back-button{left: 1%;}
+  #why-forward-button{left: 50.5%;}
+
+  .why-button-container:hover{
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .why-selection-container {
+    width: 100%;
+    height: 90vh;
+  }
+
+  .why-group {
+    height: 90vh;
+  }
+
+  .why-image {
+    margin-top: 15vh;
+  }
+
+  .why-text {
+  }
+
+  .why-text h4 {
+    font-size: 25px;
+  }
+
+  .why-text p {
+    font-size: 16px;
+  }
+}

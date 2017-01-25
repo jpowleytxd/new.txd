@@ -1,0 +1,41 @@
+/*----------*/
+/*Header Styling*/
+/*----------*/
+
+header{
+  width: 100%;
+  height: 100px;
+  z-index: 100;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 30px 25px;
+}
+
+.header-logo{
+  width: 50px;
+  z-index: 101;
+  position: relative;
+  float: left;
+}
+
+.header-logo img{
+  width: inherit;
+  display: inline-text;
+  filter: invert(100%);
+}
+
+.header-phone-number{
+  width: 100px;
+  height: 80px;
+  z-index: 20;
+  position: absolute;
+  top: 12px;
+  right: 100px;
+  line-height: 80px;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-align: right;
+  color: rgb(0, 0, 0);
+}

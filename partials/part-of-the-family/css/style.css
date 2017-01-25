@@ -1,0 +1,87 @@
+html,
+body {
+  font-family: 'Dosis', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Dosis', sans-serif;
+}
+*:active, *:focus {
+  outline: none;
+}
+
+.footer {
+  text-align: center;
+  min-height: 100vh;
+  bottom: 0;
+  position: relative;
+  overflow: hidden;
+}
+.footer button {
+  padding: 10px 15px;
+  background: transparent;
+  border: 2px solid #00c389;
+  font-family: 'Dosis', sans-serif;
+  font-size: 16px;
+  color: #00c389;
+  cursor: pointer;
+}
+.footer button.zonal-family-button {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  text-transform: uppercase;
+}
+.footer button:hover, .footer button.active {
+  background: #00c389;
+  color: #fff;
+}
+.footer .zonal-family-panel {
+  width: 100%;
+  max-width: 600px;
+  background: #3a3d57 url(http://img2.email2inbox.co.uk/2017/txd/zonal-family-bg.jpg);
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  overflow: hidden;
+}
+@media screen and (max-width: 480px) {
+  .footer .zonal-family-panel.active {
+    height: 100vh !important;
+  }
+}
+.footer .zonal-family-panel .inner {
+  background: #07384c;
+  background: rgba(7, 56, 76, 0.9);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.footer .zonal-family-panel .inner .zonal-logo {
+  -webkit-transform: translate(0, -120px);
+          transform: translate(0, -120px);
+}
+.footer .zonal-family-panel .inner .copy {
+  opacity: 0;
+}
+.footer .zonal-family-panel .inner .copy p {
+  padding: 20px 80px;
+  color: #fff;
+  line-height: 2;
+}
+@media screen and (max-width: 480px) {
+  .footer .zonal-family-panel .inner .copy p {
+    padding: 20px 40px;
+  }
+}
+.footer .zonal-family-panel .inner .copy p a {
+  color: #00c389;
+}
