@@ -16,7 +16,7 @@
   z-index: 20;
   position: relative;
   float: left;
-  background: #393D58;
+  background: #444866;
 }
 
 .prod-nav-items{
@@ -80,7 +80,7 @@
   float: left;
   overflow-y: hidden;
   overflow-x: hidden;
-  background: #393D58;
+  background: #444866;
   transition: all 0.5s ease-in-out;
 }
 
@@ -106,7 +106,7 @@
 .prod-info h3{
   position: absolute;
   top: 15vh;
-  left: 10%;
+  left: 15%;
   font-size: 30px;
   transition: all 0.5s ease-in-out;
 }
@@ -114,8 +114,8 @@
 .prod-info a .prod-link-outer{
   z-index: 10;
   position: absolute;
-  top: calc(15vh + 6px);
-  right: 0px;
+  top: calc(15vh + 3px);
+  right: 2.5%;
   float: right;
   border: 2px solid #00C389;
   color: #00C389;
@@ -129,7 +129,7 @@
 .prod-info p{
   position: absolute;
   top: 23vh;
-  left: 10%;
+  left: 15%;
   font-size: 16px;
   line-height: 1.7;
   transition: all 0.5s ease-in-out;

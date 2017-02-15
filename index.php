@@ -2,6 +2,8 @@
 
 <?php include('partials/header.php') ?>
 
+<?php include('partials/menu.php') ?>
+
 <?php include('partials/home.php') ?>
 
 <?php include('partials/home_products.php') ?>

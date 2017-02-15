@@ -31,11 +31,12 @@ header{
   height: 80px;
   z-index: 20;
   position: absolute;
-  top: 12px;
-  right: 100px;
+  top: 100px;
+  right: 7px;
   line-height: 80px;
-  font-size: 14px;
-  letter-spacing: 1.5px;
+  font-size: 16px;
+  letter-spacing: 2.5px;
   text-align: right;
-  color: rgb(0, 0, 0);
+  color: #fff;
+  transform: rotate(90deg);
 }

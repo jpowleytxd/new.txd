@@ -16,7 +16,7 @@
       Blog
       <span>Read all about it</span>
     </a>
-    <a href="#">
+    <a href="about.php">
       About TXD
       <span>What we're all about</span>
     </a>

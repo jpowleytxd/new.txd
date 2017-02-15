@@ -11,66 +11,97 @@
   float: left;
 }
 
-.back-tx{
-  width: 60%;
+.hero {
+  width: 100%;
   height: 100vh;
-  z-index: 2;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
+  background: url("http://img2.email2inbox.co.uk/2017/txd/hero/test-image.jpg") center right fixed no-repeat;
+  background-size: cover;
 }
-
-.front-xd{
-  width: 60%;
+.hero .hero-overlay {
+  width: 100%;
   height: 100vh;
-  z-index: 2;
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
+  background: url("http://img2.email2inbox.co.uk/2017/txd/hero/overlay.png") 0vw center fixed repeat-x;
+  background-size: cover;
+  -webkit-animation: rotateBg 10s infinite;
+          animation: rotateBg 10s infinite;
 }
-
-.hero-container{
-  width: 45%;
-  height: 150px;
-  z-index: 4;
-  display: block;
-  position: absolute;
-  top: 45%;
-  left: 40%;
-  background: #393D58;
-  overflow: hidden;
-}
-
-.hero-container .hero-text{
-  width: calc(100% - 150px);
-  height: 150px;
-  display: block;
-  position: relative;
-  float: left;
-  padding: 25px;
-}
-
-.hero-text h1{
+.hero .hero-text {
+  z-index: 5;
   color: #fff;
-  font-weight: 300;
-  font-size: 40px;
-  line-height: 50px;
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 70%;
+  display: block;
+  font-size: 72px;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-style: italic;
+}
+.hero .hero-text span {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  color: #00c389;
+}
+@media screen and (max-width: 640px) {
+  .hero .hero-text {
+    width: 85%;
+    font-size: 36px;
+  }
+}
+@media screen and (min-width: 641px) {
+  .hero .hero-text {
+    font-size: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero .hero-text {
+    width: 60%;
+  }
+}
+.logo {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  height: 30px;
+  width: auto;
 }
 
-.hero-container .rotate-container{
+@-webkit-keyframes rotateBg {
+  0% {
+    background-position: 0vw center;
+  }
+  50% {
+    background-position: 150vw center;
+  }
+  100% {
+    background-position: 0vw center;
+  }
+}
+
+@keyframes rotateBg {
+  0% {
+    background-position: 0vw center;
+  }
+  50% {
+    background-position: 150vw center;
+  }
+  100% {
+    background-position: 0vw center;
+  }
+}
+
+.rotate-container{
   width: 150px;
   height: 150px;
   display: block;
-  position: relative;
-  float: right;
+  position: absolute;
+  left: -30px;
 }
 
 .scroll-down-container{
   width: 150px;
   height: 150px;
-  z-index: 5;
   position: absolute;
 }
 
@@ -100,7 +131,6 @@ span.char11{transform: rotate(60deg);}
 .rotate-container .rotate-border{
   width: 90px;
   height: 90px;
-  z-index: 10;
   display: block;
   position: relative;
   margin-top: 30px;

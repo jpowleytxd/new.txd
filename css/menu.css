@@ -23,6 +23,7 @@
   width: 35px;
   height: 45px;
 }
+
 .menu .burger:hover span {
   background: #00c389;
 }
@@ -34,7 +35,7 @@
   height: 4px;
   border-radius: 3px;
   display: block;
-  background: #000;
+  background: #00C389;
   position: absolute;
   -webkit-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
@@ -77,7 +78,7 @@
   max-width: 900px;
 }
 @media screen and (max-width: 480px) {
-  .menu .inner {
+  .menu .inner.active {
     width: 100% !important;
     max-width: 100% !important;
     height: 100vh !important;

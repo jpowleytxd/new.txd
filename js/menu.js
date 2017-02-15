@@ -24,7 +24,10 @@ $(document).ready(function(){
   			onComplete: function() {
   				TweenMax.to(menuInner, 0.4, {
   					width: 0,
-  					padding: 0
+  					padding: 0,
+            onComplete: function() {
+              menuInner.removeClass('active');
+            }
   				});
   			}
   		});
@@ -36,8 +39,9 @@ $(document).ready(function(){
         'z-index': '101',
         filter: ''
       });
+
       TweenMax.to(headerPhoneNumber, 0.2, {
-        color: 'rgb(0, 0, 0)'
+        color: '#fff'
       });
 
   		burger.toggleClass('closed');
@@ -53,39 +57,45 @@ $(document).ready(function(){
 
   burger.on('click', function(event) {
 
-  	burger.prop('disabled', true);
-  	setTimeout(function(){
-  			burger.prop('disabled', false);
-  	}, 400);
+    if(burger.hasClass('disabled') == false){
+    	burger.toggleClass('disabled');
+    	setTimeout(function(){
+    			burger.toggleClass('disabled');
+    	}, 400);
 
-  	event.stopPropagation;
-  	if (menuIsOpen === false) {
-  		// Open the menu
-  		TweenMax.set(overlay, {
-  			display: 'block',
-  			opacity: 1
-  		});
-  		TweenMax.to(menuInner, 0.3, {
-  			width: '50%',
-  			padding: 0,
-  			onComplete: function() {
-  				TweenMax.to(menuContent, 0.2, {
-  					opacity: 1
-  				});
-  			}
-  		});
-  		burger.toggleClass('closed');
-  		burger.toggleClass('open');
-  		menuIsOpen = true;
+    	event.stopPropagation;
+    	if (menuIsOpen === false) {
+    		// Open the menu
+    		TweenMax.set(overlay, {
+    			display: 'block',
+    			opacity: 1
+    		});
+    		TweenMax.to(menuInner, 0.3, {
+    			width: '50%',
+    			padding: 0,
+    			onComplete: function() {
+    				TweenMax.to(menuContent, 0.2, {
+    					opacity: 1
+    				});
+    			}
+    		});
+        menuInner.addClass('active');
+    		burger.toggleClass('closed');
+    		burger.toggleClass('open');
+    		menuIsOpen = true;
 
-      TweenMax.to(headerLogo, 0.2, {
-        'z-index': '1000',
-        filter: 'invert(100%)'
-      });
+        TweenMax.to(headerLogo, 0.2, {
+          'z-index': '1000',
+          filter: 'invert(100%)'
+        });
 
-  	} else {
-  		closeMenu();
-  	}
+        TweenMax.to(headerPhoneNumber, 0.2, {
+          'color': '#00c389'
+        });
+    	} else {
+    		closeMenu();
+    	}
+    }
   });
 
   function openContactForm() {
@@ -122,7 +132,7 @@ $(document).ready(function(){
   			width: '50%'
   		});
       TweenMax.to(headerPhoneNumber, 0.2, {
-        color: 'rgb(0, 0, 0)'
+        color: '#00c389'
       });
   	$('#enquiry_form').reset();
   });

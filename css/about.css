@@ -1,0 +1,421 @@
+.full-section {
+  height: 100vh;
+  clear: both;
+  position: relative;
+}
+
+.half-section {
+  height: 50vh;
+  clear: both;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  height: 30px;
+  width: auto;
+  z-index: 9999;
+}
+
+html,
+body {
+  font-family: 'Dosis', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Dosis', sans-serif;
+}
+*:active, *:focus {
+  outline: none;
+}
+
+.welcome {
+  background: #00c389 url("http://img2.email2inbox.co.uk/2017/txd/hero/overlay-white.jpg") right center repeat-x;
+  background-size: cover;
+}
+.welcome .centered {
+  top: 45%;
+  position: relative;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+.welcome .centered .pre-heading {
+  letter-spacing: 1vw;
+  text-align: center;
+  display: block;
+  opacity: 0.3;
+  line-height: 1.2;
+  padding: 0 40px;
+  font-size: 14px;
+}
+.welcome .centered h1 {
+  text-align: center;
+  padding: 30px;
+  margin: 0;
+  font-size: 48px;
+  font-family: Georgia, serif;
+  font-weight: 300;
+  font-style: italic;
+  color: #3a3d57;
+}
+.welcome .centered h1 span {
+  color: #00c389;
+  font-family: Georgia, serif;
+  font-weight: 300;
+}
+.welcome .scroll-down-container span, .welcome .rotate-arrow.rotate-arrow {
+  color: #3a3d57;
+}
+.welcome .rotate-container {
+  width: 150px;
+  height: 150px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 5vh;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.about-us {
+  min-height: 100vh;
+}
+.about-us h2 {
+  font-size: 28px;
+}
+.about-us .agency,
+.about-us .product {
+  width: 50%;
+  float: left;
+  height: 100vh;
+  text-align: center;
+  cursor: pointer;
+}
+.about-us .agency .inner,
+.about-us .product .inner {
+  position: absolute;
+  top: 0;
+  bottom: 0px;
+  width: 30%;
+  opacity: 0;
+  pointer-events: none;
+  cursor: initial;
+}
+.about-us .agency .inner .content,
+.about-us .product .inner .content {
+  width: 100%;
+  padding: 50px;
+  overflow: auto;
+  display: block;
+  max-height: 100vh;
+}
+.about-us .agency .inner .content h2,
+.about-us .product .inner .content h2 {
+  margin-bottom: 40px;
+}
+.about-us .agency .inner .content p,
+.about-us .product .inner .content p {
+  line-height: 2;
+  margin-bottom: 20px;
+}
+.about-us .agency .inner .content::-webkit-scrollbar-track,
+.about-us .product .inner .content::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.about-us .agency .inner .switch,
+.about-us .product .inner .switch {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: absolute;
+  top: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+.about-us .agency {
+  background: url(http://img2.email2inbox.co.uk/2017/txd/hero/agency.jpg) center top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.about-us .agency .inner {
+  text-align: left;
+  left: 0;
+  color: #fff;
+  background: #3a3d57;
+  background: rgba(58, 61, 87, 0.9);
+}
+.about-us .agency .inner .switch {
+  right: 0;
+  background: #00c389;
+}
+.about-us .agency .content::-webkit-scrollbar-thumb {
+  background-color: #00c389;
+}
+.about-us .agency .content::-webkit-scrollbar {
+  width: 5px;
+  background-color: #262838;
+}
+.about-us .product {
+  background: url(http://img2.email2inbox.co.uk/2017/txd/hero/product.jpg) center top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.about-us .product .inner {
+  text-align: right;
+  right: 0;
+  color: #3a3d57;
+  background: #ccc;
+  background: rgba(204, 204, 204, 0.9);
+}
+.about-us .product .inner .switch {
+  left: 0;
+  background: #fff;
+}
+.about-us .product .content::-webkit-scrollbar-thumb {
+  background-color: #3a3d57;
+}
+.about-us .product .content::-webkit-scrollbar {
+  width: 5px;
+  background-color: #b3b3b3;
+}
+.about-us .arrow-keys {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  width: 96px;
+  height: 63px;
+}
+.about-us .arrow-keys .wrapper {
+  position: relative;
+}
+.about-us .arrow-keys .key {
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #fff;
+  display: block;
+  color: #fff;
+  border-radius: 3px;
+  position: absolute;
+  opacity: 0.9;
+  line-height: 26px;
+  text-align: center;
+  box-shadow: 0 0 10px #fff;
+  box-shadow: 0 0 0 #fff;
+}
+.about-us .arrow-keys .key.disabled {
+  opacity: 0.4;
+  box-shadow: none;
+}
+.about-us .arrow-keys .left {
+  left: 0;
+  -webkit-animation: glow 1s linear infinite;
+          animation: glow 1s linear infinite;
+}
+.about-us .arrow-keys .right {
+  left: 66px;
+  -webkit-animation: glow 1s linear infinite;
+          animation: glow 1s linear infinite;
+}
+.about-us .arrow-keys .down {
+  left: 33px;
+}
+.about-us .arrow-keys .up {
+  left: 33px;
+  bottom: 3px;
+}
+
+.burger {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  z-index: 20;
+  cursor: pointer;
+  width: 35px;
+  height: 45px;
+}
+.burger:hover span {
+  background: #00c389;
+}
+.burger.white span {
+  background: #fff;
+}
+.burger span {
+  width: 100%;
+  height: 4px;
+  border-radius: 3px;
+  display: block;
+  background: #000;
+  position: absolute;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  background: #00c389;
+}
+.burger span:nth-of-type(2) {
+  top: 10px;
+}
+.burger span:nth-of-type(3) {
+  top: 10px;
+}
+.burger span:nth-of-type(4) {
+  top: 20px;
+}
+.burger.open span:nth-of-type(1) {
+  -webkit-transform: scale(0) translate(0, -30px);
+          transform: scale(0) translate(0, -30px);
+}
+.burger.open span:nth-of-type(2) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.burger.open span:nth-of-type(3) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.burger.open span:nth-of-type(4) {
+  -webkit-transform: scale(0) translate(0, 30px);
+          transform: scale(0) translate(0, 30px);
+}
+
+@-webkit-keyframes glow {
+  0% {
+    box-shadow: 0 0 0 #fff;
+  }
+  50% {
+    box-shadow: 0 0 20px #fff;
+  }
+  100% {
+    box-shadow: 0 0 0 #fff;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 #fff;
+  }
+  50% {
+    box-shadow: 0 0 20px #fff;
+  }
+  100% {
+    box-shadow: 0 0 0 #fff;
+  }
+}
+.rotate-container {
+  width: 150px;
+  height: 150px;
+  display: block;
+  position: absolute;
+  left: -30px;
+}
+
+.scroll-down-container {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+}
+
+.scroll-down-container span {
+  height: 120px;
+  position: absolute;
+  top: 15px;
+  left: 72px;
+  color: #fff;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+/*span.char1 {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+span.char2 {
+  -webkit-transform: rotate(6deg);
+          transform: rotate(6deg);
+}
+
+span.char3 {
+  -webkit-transform: rotate(12deg);
+          transform: rotate(12deg);
+}
+
+span.char4 {
+  -webkit-transform: rotate(18deg);
+          transform: rotate(18deg);
+}
+
+span.char5 {
+  -webkit-transform: rotate(24deg);
+          transform: rotate(24deg);
+}
+
+span.char6 {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+span.char7 {
+  -webkit-transform: rotate(36deg);
+          transform: rotate(36deg);
+}
+
+span.char8 {
+  -webkit-transform: rotate(42deg);
+          transform: rotate(42deg);
+}
+
+span.char9 {
+  -webkit-transform: rotate(48deg);
+          transform: rotate(48deg);
+}
+
+span.char10 {
+  -webkit-transform: rotate(54deg);
+          transform: rotate(54deg);
+}
+
+span.char11 {
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+}*/
+
+.rotate-container .rotate-border {
+  width: 90px;
+  height: 90px;
+  display: block;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid #00C389;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  cursor: pointer;
+}
+
+.rotate-arrow.rotate-arrow {
+  width: calc(100% - 5px);
+  height: 80px;
+  position: absolute;
+  top: 0;
+  right: 1.5px;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  line-height: 80px;
+}
+
+#about-page .header-phone-number{
+  color: #444866;
+}

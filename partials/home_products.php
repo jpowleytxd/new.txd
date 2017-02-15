@@ -1,4 +1,4 @@
-<section class="products">
+<section class="products" id="products">
 <div class="prod-nav-container">
   <div class="prod-nav-bar">
     <div class="prod-nav-current"></div>

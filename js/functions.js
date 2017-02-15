@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   var scrollDownContainer = $('.scroll-down-container');
   var rotateArrow = $('.rotate-arrow');
-  TweenMax.to(scrollDownContainer, 10, {
+  TweenMax.to(scrollDownContainer, 5, {
     ease: Power0.easeNone,
     rotation: 360,
     repeat: -1
@@ -12,13 +12,13 @@ $(document).ready(function(){
   TweenMax.set(rotateArrow,  {
     y: -5
   });
-  tl.to(rotateArrow,1,{
+  tl.to(rotateArrow,0.5,{
     y: 5,
-    color: 'rgba(255, 255, 255, 0.5)'
+    opacity: 0.5
   });
-  tl.to(rotateArrow,1,{
+  tl.to(rotateArrow,0.5,{
     y: -5,
-    color: 'rgba(255, 255, 255, 1)',
+    opacity: 1,
     onComplete: function() {
       tl.seek(0);
       tl.play();
@@ -106,12 +106,12 @@ $(document).ready(function(){
   }
 });
 
-  $('div.rotate-container').on('click', function(event){
-    console.log('hit');
-    $('html,body').animate({
-        scrollTop: $(".products").offset().top},
-        'slow');
-  });
+  // $('div.rotate-container').on('click', function(event){
+  //   console.log('hit');
+  //   $('html,body').animate({
+  //       scrollTop: $(".products").offset().top},
+  //       'slow');
+  // });
 
 
   $('.carousel').owlCarousel({
