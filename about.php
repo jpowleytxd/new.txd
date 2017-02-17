@@ -4,6 +4,8 @@
 
 <?php include('partials/menu.php') ?>
 
+<script src="js/about.js"></script>
+
 <div class="full-section welcome">
 	<div class="centered">
 		<span class="pre-heading">BESPOKE SOFTWARE TO  INDIVIDUAL CAMPAIGN</span>

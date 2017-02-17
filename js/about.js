@@ -116,36 +116,24 @@ $(document).ready(function(){
 
   // Map keypresses to activate the team sides
   $(document).bind('keydown', function(e) {
-  	event.preventDefault();
   	if ( event.keyCode == 37 ) {
+      event.preventDefault();
   		openSection('.agency','.product');
     } else if (event.keyCode == 39) {
+      event.preventDefault();
       openSection('.product','.agency');
   	}
   });
 
-  // Smooth scrolling to anchor links
-  $('div.rotate-container').on('click', function(event) {
-  		var target = '#' + $(this).data('scroll');
-  		console.log(target);
-  		target     = $(target);
-  		target = target.length ? target : $('[id=' + this.hash.slice(1) +']');
-  			 if (target.length) {
-  				 $('html,body').animate({
-  						 scrollTop: target.offset().top
-  				}, 750);
-  				return false;
-  		}
+  $('.left').on('click', function(event){
+    event.preventDefault();
+    openSection('.agency','.product');
   });
 
-  // Determine if an element is in the visible viewport
-  function isScrolledIntoView(elem, margin) {
-      var docViewTop    = $(window).scrollTop();
-      var docViewBottom = docViewTop + $(window).height();
-      var elemTop       = $(elem).offset().top;
-      var elemBottom    = elemTop + $(elem).height();
-      return ((elemBottom <= docViewBottom + margin) && (elemTop >= docViewTop - margin));
-  }
+  $('.right').on('click', function(event){
+    event.preventDefault();
+    openSection('.product','.agency');
+  });
 
   // If user scrolls away from the teams panel, reset it
   $(window).on('scroll', function(){

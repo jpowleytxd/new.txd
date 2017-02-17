@@ -28,7 +28,6 @@ $page = $page . '-page';
   <script src="http://new.txd.dev/js/OwlCarousel2-2.2.0/dist/owl.carousel.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
   <script src="js/functions.js"></script>
-  <script src="js/about.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/footer.js"></script>
 </head>

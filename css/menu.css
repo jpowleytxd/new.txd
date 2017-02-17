@@ -296,7 +296,7 @@ textarea:-webkit-autofill:focus,
   letter-spacing: normal;
   font-size: 14px;
   font-family: Georgia, serif;
-  display: block;
+  display: none;
   text-transform: capitalize;
   font-style: italic;
   background: #262838;

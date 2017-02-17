@@ -27,6 +27,7 @@ footer button.zonal-family-button {
   position: absolute;
   bottom: 50px;
   left: 50%;
+  z-index: 500;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
   text-transform: uppercase;
@@ -42,6 +43,7 @@ footer .zonal-family-panel {
   max-width: 600px;
   background: #3a3d57 url(http://img2.email2inbox.co.uk/2017/txd/zonal-family-bg.jpg);
   height: 0;
+  z-index: 500;
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -89,4 +91,94 @@ footer .zonal-family-panel .inner .copy p {
 
 footer .zonal-family-panel .inner .copy p a {
   color: #00c389;
+}
+
+.footer-left{
+  width: 200px;
+  height: 150px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+  border-left: 2px solid #00c389;
+  text-align: left;
+}
+
+.footer-left p{
+  color: rgb(50, 50, 50);
+}
+
+.footer-left a{
+  color: rgb(150, 150, 150);
+}
+
+.footer-left a:hover{
+  color: rgb(50, 50, 50);
+}
+
+.footer-left a, .footer-left p{
+  display: block;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-right{
+  height: 150px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+  border-right: 2px solid #00c389;
+}
+
+.footer-right-text{
+  text-align: right;
+  color: rgb(150, 150, 150);
+}
+
+.footer-right-text:hover{
+color: rgb(50, 50, 50);
+}
+
+.footer-right-text p{
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 920px){
+  .footer-left{
+    height: 200px;
+    left: 50px;
+  }
+
+  .footer-right{
+    height: 200px;
+    right: 50px;
+  }
+}
+
+@media screen and (max-width: 820px){
+  .footer-left{
+    height: 250px;
+    left: 25px;
+  }
+
+  .footer-right{
+    height: 250px;
+    right: 25px;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .footer-left{
+    height: 250px;
+    left: 25px;
+    font-size: 13px;
+  }
+
+  .footer-right{
+    height: 250px;
+    right: 25px;
+    font-size: 13px;
+  }
 }

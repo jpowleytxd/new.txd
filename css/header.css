@@ -40,3 +40,9 @@ header{
   color: #fff;
   transform: rotate(90deg);
 }
+
+@media screen and (max-width: 500px){
+  .header-phone-number{
+    display: none;
+  }
+}

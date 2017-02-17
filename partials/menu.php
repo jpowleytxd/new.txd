@@ -30,7 +30,7 @@
   <div class="form-wrapper">
     <div class="title">
       Just fill out the short form...
-      <p class="error-message">Testing the error message</p>
+      <p class="error-message"></p>
     </div>
     <form id="enquiry_form">
       <label for="title">Title:</label>

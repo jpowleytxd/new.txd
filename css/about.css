@@ -208,6 +208,9 @@ body {
   text-align: center;
   box-shadow: 0 0 10px #fff;
   box-shadow: 0 0 0 #fff;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select-none;
 }
 .about-us .arrow-keys .key.disabled {
   opacity: 0.4;
@@ -217,11 +220,13 @@ body {
   left: 0;
   -webkit-animation: glow 1s linear infinite;
           animation: glow 1s linear infinite;
+  cursor: pointer;
 }
 .about-us .arrow-keys .right {
   left: 66px;
   -webkit-animation: glow 1s linear infinite;
           animation: glow 1s linear infinite;
+  cursor: pointer; 
 }
 .about-us .arrow-keys .down {
   left: 33px;

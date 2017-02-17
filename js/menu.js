@@ -40,9 +40,16 @@ $(document).ready(function(){
         filter: ''
       });
 
-      TweenMax.to(headerPhoneNumber, 0.2, {
-        color: '#fff'
-      });
+      var pathname = window.location.pathname;
+      if(pathname.indexOf("about") >= 0){
+        TweenMax.to(headerPhoneNumber, 0.2, {
+          color: '#444866'
+        });
+      } else{
+        TweenMax.to(headerPhoneNumber, 0.2, {
+          color: '#fff'
+        });
+      }
 
   		burger.toggleClass('closed');
   		burger.toggleClass('open');
@@ -114,7 +121,7 @@ $(document).ready(function(){
   		width: '80%'
   	});
     TweenMax.to(headerPhoneNumber, 0.2, {
-      color: 'rgb(255, 255, 255)'
+      color: '#fff'
     });
   }
 
@@ -142,5 +149,23 @@ $(document).ready(function(){
     event.preventDefault();
     openContactForm();
   })
+
+  $('#footer-contact-us').on('click', function(event){
+    event.preventDefault();
+    $('body').animate({
+        scrollTop: 0
+    }, 500);
+
+    burger.toggleClass('closed');
+    burger.toggleClass('open');
+    menuIsOpen = true;
+
+    TweenMax.set(overlay, {
+      display: 'block',
+      opacity: 1
+    });
+
+    openContactForm();
+  });
 
 });

@@ -113,6 +113,19 @@ $(document).ready(function(){
   //       'slow');
   // });
 
+  // Smooth scrolling to anchor links
+  $('div.rotate-container').on('click', function(event) {
+  		var target = '#' + $(this).data('scroll');
+  		target     = $(target);
+  		target = target.length ? target : $('[id=' + this.hash.slice(1) +']');
+  			 if (target.length) {
+  				 $('html,body').animate({
+  						 scrollTop: target.offset().top
+  				}, 750);
+  				return false;
+  		}
+  });
+
 
   $('.carousel').owlCarousel({
   	items:1,
@@ -160,14 +173,57 @@ $(document).ready(function(){
   	        encode      : true
   		}).done(function(data) {
   			$errorMessage.html('Thanks for your enquiry!');
+        $errorMessage.css('display', 'block');
   			$errorMessage.css('color', 'green');
   			// Trigger the thank you email...
   				console.log(data);
   		});
   	} else {
   		$errorMessage.html('Please check your email address and/or name, they may be invalid.');
+      $errorMessage.css('display', 'block');
   		$errorMessage.css('color', 'red');
   	}
   });
 
+  $.fn.scrollEnd = function(callback, timeout) {
+  $(this).scroll(function(){
+      var $this = $(this);
+      if ($this.data('scrollTimeout')) {
+        clearTimeout($this.data('scrollTimeout'));
+      }
+      $this.data('scrollTimeout', setTimeout(callback,timeout));
+    });
+  };
+
+  $(window).on('scroll', function(event){
+    var section = $('section');
+    $.each(section, function() {
+      var self = $(this);
+      $(window).scrollEnd(function() {
+        if(isScrolledIntoView(self,200) === true){
+          console.log(self);
+          $('html,body').animate({
+              scrollTop: self.offset().top
+         }, 750);
+        }
+      }, 500);
+    });
+
+  });
+
 });
+
+window.addEventListener("load",function() {
+    setTimeout(function(){
+        window.scrollTo(0, 1);
+    }, 0);
+});
+
+// Determine if an element is in the visible viewport
+function isScrolledIntoView(elem, margin) {
+    var docViewTop    = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+    var elemTop       = $(elem).offset().top;
+    var elemBottom    = elemTop + $(elem).height();
+    return ((elemBottom <= docViewBottom + margin) && (elemTop >= docViewTop - margin));
+}
