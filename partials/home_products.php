@@ -24,7 +24,7 @@
 </div>
 <div class="prod-info-container">
   <div class="prod-shift-div">
-    <div class="prod-info" id="mobile-info">
+    <div class="prod-info" id="mobile-info" data-amount="0" data-position="1">
       <h3>Mobile Applications</h3>
       <p>For hospitality brands, mobile apps can have a game-changing impact on customer engagement and revenue generation.
         Ourapps are EPoS-integrated, white-label and delivered via a SaaS framework.<br/><br/>
@@ -34,7 +34,7 @@
         <div class="prod-link-outer mobile-prod-link" style="display: none;">Find Out More</div>
       </a>
     </div>
-    <div class="prod-info" id="campaigns-info">
+    <div class="prod-info" id="campaigns-info" data-amount="1" data-position="2">
       <h3>Marketing Campaigns</h3>
       <p>CampaignsPlus is our online campaign management tool, the control-centre for your campaigns via email,
         SMS or push notifications in your apps. It's always on, sending tailored,
@@ -45,7 +45,7 @@
         <div class="prod-link-outer campaigns-prod-link" style="display: none;">Find Out More</div>
       </a>
     </div>
-    <div class="prod-info" id="loyalty-info">
+    <div class="prod-info" id="loyalty-info" data-amount="2" data-position="3">
       <h3>Loyalty</h3>
       <p>Whether you run a formal loyalty scheme, or want to surprise and delight loyal customers with ad hoc rewards,
         our solution is designed to drive footfall and spend in your business.
@@ -57,7 +57,7 @@
         <div class="prod-link-outer loyalty-prod-link" style="display: none;">Find Out More</div>
       </a>
     </div>
-    <div class="prod-info" id="scv-info">
+    <div class="prod-info" id="scv-info" data-amount="3" data-position="4">
       <h3>SCV</h3>
       <p>A “Single Customer View” database will allow you to aggregate your customer data and transactional information in one place,
         streamlining feeds from EPoS, bookings, loyalty, app sign-ups, WiFi and promotions.<br/><br/>

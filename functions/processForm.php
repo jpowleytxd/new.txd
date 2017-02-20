@@ -1,15 +1,31 @@
 <?php
 
+/*
+1. Get all data from post
+2. Send data to TXD
+3. Send receipt to user
+*/
+
 
 $apiURL =  'https://campaigns-plus.izone-app.com/api-v1/index.cfm';
 
-$title = $_POST['title'];
-$name = $_POST['name'];
-$email = $_POST['email'];
+//Get all user data from post
+$title = trim($_POST['title']);
+$name = trim($_POST['name']);
+$email = trim($_POST['email']);
+$enquiry = trim($_POST['enquiry']);
 
-print_r($name);
-print_r($email);
+// print_r($name);
+// print_r($email);
 
+$to = 'jorden.powley@txdlimited.co.uk';
+$subject = 'Email Enquiry Test';
+$message = $enquiry;
+$headers = "From: {$email} . \r\n";
+
+mail($to, $subject, $message, $headers);
+
+//Prep API data
 $data = '{
    "request": {
         "username": "txduser",
@@ -22,7 +38,8 @@ $data = '{
         "recipients": [
             {
                 "recipient": "' . $email . '",
-                "fname": "' . $name . '"
+                "fname": "' . $name . '",
+                "dyn1": "' . $enquiry . '"
             }
         ]
     }
@@ -49,14 +66,9 @@ $info = curl_getinfo($curl);
 curl_close($curl);
 
 if ($error) {
-    echo '<p><strong>Email triggering failed.</strong></p>';
-    var_dump($error);
-    var_dump($info);
-    #return false;
+    echo 'fail';
 } else {
-    echo '<p><strong>Email successfuffy triggered.</strong></p>';
-    var_dump($response);
-    #return true;
+    echo 'success';
 }
 
 ?>

@@ -106,6 +106,10 @@ $(document).ready(function(){
   }
 });
 
+$('.products').on('swl', function(event){
+  alert('Swipe');
+});
+
   // $('div.rotate-container').on('click', function(event){
   //   console.log('hit');
   //   $('html,body').animate({
@@ -124,22 +128,6 @@ $(document).ready(function(){
   				}, 750);
   				return false;
   		}
-  });
-
-
-  $('.carousel').owlCarousel({
-  	items:1,
-  	nav: false,
-  	dots: false,
-  	loop: true
-  });
-
-  var owl = $('.carousel').owlCarousel();
-  $("#why-forward-button").on('click', function () {
-      owl.trigger('next.owl.carousel');
-  });
-  $("#why-back-button").on('click', function () {
-      owl.trigger('prev.owl.carousel');
   });
 
   $('.send-message').on('click', function(event) {
@@ -167,26 +155,118 @@ $(document).ready(function(){
   		console.log('Valid email address');
   		$.ajax({
   			type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-  	        url         : 'functions/processForm.php', // the url where we want to POST
+  	        url         : '/newtxd/functions/processForm.php', // the url where we want to POST
   	        data        : formData, // our data object
   	        dataType    : 'text', // what type of data do we expect back from the server
   	        encode      : true
   		}).done(function(data) {
-  			$errorMessage.html('Thanks for your enquiry!');
-        $errorMessage.css('display', 'block');
-  			$errorMessage.css('color', 'green');
-  			// Trigger the thank you email...
-  				console.log(data);
+        if(data == 'success'){
+          console.log(data);
+    			$errorMessage.html('Thanks for your enquiry!');
+          $errorMessage.removeClass('error-message');
+          $errorMessage.addClass('success-message');
+          $errorMessage.css('display', 'block');
+    			// $errorMessage.css('color', 'green');
+    			// Trigger the thank you email...
+        } else{
+          console.log(data);
+          $errorMessage.html('Please check your email address and/or name, they may be invalid.');
+          $errorMessage.removeClass('success-message');
+          $errorMessage.addClass('error-message');
+          $errorMessage.css('display', 'block');
+      		// $errorMessage.css('color', 'red');
+        }
   		});
   	} else {
+      console.log(data);
   		$errorMessage.html('Please check your email address and/or name, they may be invalid.');
+      $errorMessage.removeClass('success-message');
+      $errorMessage.addClass('error-message');
       $errorMessage.css('display', 'block');
-  		$errorMessage.css('color', 'red');
+  		// $errorMessage.css('color', 'red');
   	}
   });
 
+  var touchStartX;
+  var touchStartY;
+  var touchEndX;
+  var touchEndY;
+
+  $('.prod-info').on('touchstart', function(event){
+    touchStartX = event.originalEvent.touches[0].clientX;
+    touchStartY = event.originalEvent.touches[0].clientY;
+  });
+
+  $('.prod-info').on('touchmove', function(event){
+    touchEndX = event.originalEvent.touches[0].clientX;
+    touchEndY = event.originalEvent.touches[0].clientY;
+  });
+
+  $('.prod-info').on('touchend', function(event){
+    var xDif = Math.abs(touchEndX - touchStartX);
+    var yDif = Math.abs(touchEndY - touchStartY);
+
+    if(xDif > yDif){//Horizontal Scroll
+      if(touchStartX > touchEndX){ //Swipe left
+        var currentPos = $(this).data('amount');
+        if(currentPos < 3){
+          var screenWidth = $('body').css("width");
+          screenWidth = parseInt(screenWidth);
+
+          var multiply = currentPos + 1;
+          var menuLeft = multiply * 25;
+          var infoLeft = multiply * 100;
+
+          var prodNavCurrent = $('.prod-nav-current');
+          menuLeft = menuLeft + '%';
+          TweenLite.to(prodNavCurrent, 1, {
+            ease: Power3.easeOut,
+            marginLeft: menuLeft
+          })
+
+          $('.prod-selected').toggleClass('prod-selected');
+          $(this).toggleClass('prod-selected');
+
+          var prodShiftDiv = $('.prod-shift-div');
+          infoLeft = '-' + infoLeft + '%';
+          TweenLite.to(prodShiftDiv, 1, {
+            ease: Power3.easeOut,
+            left: infoLeft
+          });
+        }
+      } else if(touchStartX < touchEndX){ //Swipe right
+        var currentPos = $(this).data('amount');
+        if(currentPos > 0){
+          var screenWidth = $('body').css("width");
+          screenWidth = parseInt(screenWidth);
+
+          var multiply = currentPos - 1;
+          var menuLeft = multiply * 25;
+          var infoLeft = multiply * 100;
+
+          var prodNavCurrent = $('.prod-nav-current');
+          menuLeft = menuLeft + '%';
+          TweenLite.to(prodNavCurrent, 1, {
+            ease: Power3.easeOut,
+            marginLeft: menuLeft
+          })
+
+          $('.prod-selected').toggleClass('prod-selected');
+          $(this).toggleClass('prod-selected');
+
+          var prodShiftDiv = $('.prod-shift-div');
+          infoLeft = '-' + infoLeft + '%';
+          TweenLite.to(prodShiftDiv, 1, {
+            ease: Power3.easeOut,
+            left: infoLeft
+          });
+        }
+      }
+    }
+  });
+
   $.fn.scrollEnd = function(callback, timeout) {
-  $(this).scroll(function(){
+    $(this).scroll(function(){
       var $this = $(this);
       if ($this.data('scrollTimeout')) {
         clearTimeout($this.data('scrollTimeout'));
@@ -195,35 +275,38 @@ $(document).ready(function(){
     });
   };
 
-  $(window).on('scroll', function(event){
+  // how to call it (with a 1000ms timeout):
+  $(window).scrollEnd(function(){
     var section = $('section');
-    $.each(section, function() {
+    $.each(section, function(){
       var self = $(this);
-      $(window).scrollEnd(function() {
-        if(isScrolledIntoView(self,200) === true){
-          console.log(self);
-          $('html,body').animate({
-              scrollTop: self.offset().top
-         }, 750);
+      if(isScrolledIntoView(self,400,true) === true){
+        console.clear();
+        console.log(self);
+        if($(window).width() < 720){
+          scrollToEle(self);
         }
-      }, 500);
-    });
+      }
+    }, 500);
+  }, 100);
 
-  });
+  function scrollToEle(ele) {
+    $('html,body').animate({
+        scrollTop: ele.offset().top
+   }, 250);
+  }
 
-});
-
-window.addEventListener("load",function() {
-    setTimeout(function(){
-        window.scrollTo(0, 1);
-    }, 0);
 });
 
 // Determine if an element is in the visible viewport
-function isScrolledIntoView(elem, margin) {
+function isScrolledIntoView(elem, margin, halfScreen) {
     var docViewTop    = $(window).scrollTop();
     var docViewBottom = docViewTop + $(window).height();
     var elemTop       = $(elem).offset().top;
     var elemBottom    = elemTop + $(elem).height();
+
+    if (halfScreen === true) {
+      margin = $(window).height() / 2;
+    }
     return ((elemBottom <= docViewBottom + margin) && (elemTop >= docViewTop - margin));
 }

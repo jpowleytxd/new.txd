@@ -7,14 +7,12 @@
   height: 80vh;
   position: relative;
   float: left;
-  z-index: 1;
   background: #C3C3B9;
 }
 
 .why-title {
   width: 100%;
   height: 80vh;
-  z-index: 2;
   position: absolute;
   top: 0;
   left: 0;
@@ -29,16 +27,32 @@
           user-select: none;
 }
 
-.why-container {
-  width: 90%;
-  height: 60vh;
-  z-index: 3;
-  display: block;
-  position: relative;
-  margin-top: 10vh;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
+.swiper-container{
+  width:100%;
+  height:100%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.swiper-slide{
+  text-align:center;
+  font-size:18px;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display:flex;
+  -webkit-box-pack:center;
+  -ms-flex-pack:center;
+  -webkit-justify-content:center;
+  justify-content:center;
+  -webkit-box-align:center;
+  -ms-flex-align:center;
+  -webkit-align-items:center;
+  align-items:center;
+}
+
+.swiper-button-next, .swiper-button-prev{
+  background: none !important;
 }
 
 .why-container img {
@@ -46,13 +60,15 @@
   height: auto;
 }
 
-.why-button-container {
-  width: 10%;
-  height: 60vh;
-  z-index: 1000;
+.why-button-container{
+  width: 10% !important;
+  height: 60vh !important;
+  z-index: 1000 !important;
   display: block;
-  position: relative;
-  float: left;
+  position: absolute;
+  top: 20vh;
+  /*float: left;*/
+  margin-top: -120px !important;
   color: #393D58;
   font-size: 200px;
   font-weight: 100;
@@ -61,6 +77,14 @@
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   user-select: none;
+}
+
+.why-button-next{
+  right: 0;
+}
+
+.why-button-right{
+  left: 0;
 }
 
 .why-button-container:hover {
@@ -100,6 +124,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   max-height: 50vh;
+  max-width: 100%;
 }
 
 #bulb{max-height: 40vh;}
@@ -184,25 +209,20 @@
   }
 
   .why-button-container {
-    height: 10vh;
+    height: 100vh;
     position: absolute;
-    bottom: 1vw;
-    font-size: 70px;
+    font-size: 100px;
     font-weight: 400;
-    line-height: 8vh;
+    /*line-height: 8vh;*/
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     user-select: none;
-    background: rgba(255, 255, 255, 0.2);
     width: 48.5%;
   }
 
   #why-back-button{left: 1%;}
   #why-forward-button{left: 50.5%;}
 
-  .why-button-container:hover{
-    background: rgba(255, 255, 255, 0.3);
-  }
 
   .why-selection-container {
     width: 100%;

@@ -34,6 +34,21 @@
     </div>
   </div>
 </footer>
+
+<script src="http://idangero.us/swiper/dist/js/swiper.min.js"></script>
+
+<script>
+  var swiper = new Swiper('.swiper-container', {
+      nextButton: '.why-button-next',
+      prevButton: '.why-button-prev',
+      uniqueNavElements: false,
+      slidesPerView: 1,
+      paginationClickable: true,
+      spaceBetween: 30,
+      loop: true
+  });
+</script>
+
 </body>
 
 </html>

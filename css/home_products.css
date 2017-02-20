@@ -142,6 +142,7 @@
   position: relative;
   float: left;
   transition: all 0.5s ease-in-out;
+  overflow: hidden;
 }
 
 .prod-image-shift-div{
@@ -322,6 +323,6 @@
 
   .prod-info p{
     margin-bottom: 25px;
-    font-size: 14px;
+    font-size: 18px;
   }
 }
