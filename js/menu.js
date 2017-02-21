@@ -56,6 +56,8 @@ $(document).ready(function(){
   		contactForm.removeClass('active');
   		burger.removeClass('white');
   		menuIsOpen = false;
+
+      $('#enquiry_form').trigger("reset");
   }
 
   overlay.on('click', function(event) {
@@ -141,7 +143,7 @@ $(document).ready(function(){
       TweenMax.to(headerPhoneNumber, 0.2, {
         color: '#00c389'
       });
-  	$('#enquiry_form').reset();
+  	$('#enquiry_form').trigger("reset");
   });
 
   $('.prod-link-outer').on('click', function(event) {
@@ -152,9 +154,7 @@ $(document).ready(function(){
 
   $('#footer-contact-us').on('click', function(event){
     event.preventDefault();
-    $('body').animate({
-        scrollTop: 0
-    }, 500);
+    window.scrollTo(0, 0);
 
     burger.toggleClass('closed');
     burger.toggleClass('open');

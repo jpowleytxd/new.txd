@@ -8,14 +8,14 @@
 </div>
 <div class="inner">
   <div class="menu-content">
-    <a href="#">
+    <!-- <a href="#">
       Case Studies
       <span>Discover our work</span>
-    </a>
-    <a href="#">
+    </a> -->
+    <!-- <a href="#">
       Blog
       <span>Read all about it</span>
-    </a>
+    </a> -->
     <a href="about.php">
       About TXD
       <span>What we're all about</span>

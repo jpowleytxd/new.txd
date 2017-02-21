@@ -27,15 +27,9 @@ a {
 
 html, body{
   font-family: 'Dosis', sans-serif;
-  -webkit-overflow-scrolling: touch;
-  -webkit-scroll-snap-type: mandatory;
-      -ms-scroll-snap-type: mandatory;
-          scroll-snap-type: mandatory;
-  /* older spec implementation */
-  -webkit-scroll-snap-destination: 100vh 0%;
-      -ms-scroll-snap-destination: 100vh 0%;
-          scroll-snap-destination: 100vh 0%;
-  -webkit-scroll-snap-points-y: repeat(100vh);
-      -ms-scroll-snap-points-y: repeat(100vh);
-          scroll-snap-points-y: repeat(100vh);
+}
+
+
+*:active, *:focus {
+  outline: none;
 }

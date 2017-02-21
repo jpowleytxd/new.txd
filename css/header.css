@@ -41,6 +41,11 @@ header{
   transform: rotate(90deg);
 }
 
+.header-phone-number span::selection{
+  background: #00c389;
+  color: #fff;
+}
+
 @media screen and (max-width: 500px){
   .header-phone-number{
     display: none;

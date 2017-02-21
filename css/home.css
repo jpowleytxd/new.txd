@@ -38,10 +38,21 @@
   font-weight: normal;
   font-style: italic;
 }
+
+.hero .hero-text::selection{
+  background: #00c389;
+  color: #fff;
+}
+
 .hero .hero-text span {
   font-family: Georgia, serif;
   font-weight: normal;
   color: #00c389;
+}
+
+.hero .hero-text span::selection{
+  background: #00c389;
+  color: #fff;
 }
 @media screen and (max-width: 640px) {
   .hero .hero-text {

@@ -106,17 +106,6 @@ $(document).ready(function(){
   }
 });
 
-$('.products').on('swl', function(event){
-  alert('Swipe');
-});
-
-  // $('div.rotate-container').on('click', function(event){
-  //   console.log('hit');
-  //   $('html,body').animate({
-  //       scrollTop: $(".products").offset().top},
-  //       'slow');
-  // });
-
   // Smooth scrolling to anchor links
   $('div.rotate-container').on('click', function(event) {
   		var target = '#' + $(this).data('scroll');

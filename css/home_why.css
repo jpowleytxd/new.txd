@@ -139,6 +139,7 @@
   position: relative;
   color: #393D58;
   text-align: center;
+  cursor: default;
 }
 
 .why-text h4 {

@@ -4,6 +4,6 @@
   </a>
   <?php include('menu.php') ?>
   <div class="header-phone-number">
-    <span>01785257777</span>
+    <a href="tel:+441785257777"><span>01785257777</span></a>
   </div>
 </header>
