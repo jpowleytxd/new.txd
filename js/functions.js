@@ -267,11 +267,10 @@ $(document).ready(function(){
   // how to call it (with a 1000ms timeout):
   $(window).scrollEnd(function(){
     var section = $('section');
+
     $.each(section, function(){
       var self = $(this);
       if(isScrolledIntoView(self,400,true) === true){
-        console.clear();
-        console.log(self);
         if($(window).width() < 720){
           scrollToEle(self);
         }
@@ -280,9 +279,11 @@ $(document).ready(function(){
   }, 100);
 
   function scrollToEle(ele) {
-    $('html,body').animate({
-        scrollTop: ele.offset().top
-   }, 250);
+    if(ele.attr('id') !== 'clients'){
+      $('html,body').animate({
+          scrollTop: ele.offset().top
+     }, 250);
+   }
   }
 
 });

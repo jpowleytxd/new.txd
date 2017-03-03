@@ -6,7 +6,7 @@
 
 <script src="js/about.js"></script>
 
-<div class="full-section welcome">
+<div class="full-section welcome" id="top">
 	<div class="centered">
 		<span class="pre-heading">BESPOKE SOFTWARE TO  INDIVIDUAL CAMPAIGN</span>
 		<h1>We work in two teams, <span>product</span> &amp; <span>agency</span>.</h1>
@@ -32,39 +32,39 @@
 </div>
 </div>
 <div class="full-section" id="prod-agen">
-<div class="about-us">
-	<div class="product">
-		<div class="inner">
-			<div class="switch">&#8678;</div>
-			<div class="content">
-				<h2>Product</h2>
-				<p>We've made it our mission to create a the most powerful and revolutionary communications and CRM suite, from booking your visit online to mass email marketing with integrated loyalty.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos at, voluptas aut nobis quo labore! Fugiat quas, quaerat ad autem, dicta enim tempore veniam magnam illum nisi. Similique, dolorum deserunt?</p>
-				<p>We've made it our mission to create a the most powerful and revolutionary communications and CRM suite, from booking your visit online to mass email marketing with integrated loyalty.</p>
+	<div class="about-us">
+		<div class="product">
+			<div class="inner">
+				<div class="switch">&#8678;</div>
+				<div class="content">
+					<h2>Product</h2>
+					<p>We've made it our mission to create a the most powerful and revolutionary communications and CRM suite, from booking your visit online to mass email marketing with integrated loyalty.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos at, voluptas aut nobis quo labore! Fugiat quas, quaerat ad autem, dicta enim tempore veniam magnam illum nisi. Similique, dolorum deserunt?</p>
+					<p>We've made it our mission to create a the most powerful and revolutionary communications and CRM suite, from booking your visit online to mass email marketing with integrated loyalty.</p>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="agency">
-		<div class="inner">
-			<div class="switch">&#8680;</div>
+		<div class="agency">
+			<div class="inner">
+				<div class="switch">&#8680;</div>
 
-			<div class="content">
-				<h2>Agency</h2>
-				<p>We've made it our mission to create a the most powerful and revolutionary communications and CRM suite, from booking your visit online to mass email marketing with integrated loyalty.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos at, voluptas aut nobis quo labore! Fugiat quas, quaerat ad autem, dicta enim tempore veniam magnam illum nisi. Similique, dolorum deserunt?</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos at, voluptas aut nobis quo labore! Fugiat quas, quaerat ad autem, dicta enim tempore veniam magnam illum nisi. Similique, dolorum deserunt?</p>
+				<div class="content">
+					<h2>Agency</h2>
+					<p>We've made it our mission to create a the most powerful and revolutionary communications and CRM suite, from booking your visit online to mass email marketing with integrated loyalty.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos at, voluptas aut nobis quo labore! Fugiat quas, quaerat ad autem, dicta enim tempore veniam magnam illum nisi. Similique, dolorum deserunt?</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos at, voluptas aut nobis quo labore! Fugiat quas, quaerat ad autem, dicta enim tempore veniam magnam illum nisi. Similique, dolorum deserunt?</p>
+				</div>
+			</div>
+		</div>
+		<div class="arrow-keys">
+			<div class="wrapper">
+				<span class="key up" data-scroll="top">&uarr;</span>
+				<span class="key left">&larr;</span>
+				<span class="key right">&rarr;</span>
+				<span class="key down" data-scroll="footer">&darr;</span>
 			</div>
 		</div>
 	</div>
-	<div class="arrow-keys">
-		<div class="wrapper">
-			<span class="key up disabled">&uarr;</span>
-			<span class="key left">&larr;</span>
-			<span class="key right">&rarr;</span>
-			<span class="key down disabled">&darr;</span>
-		</div>
-	</div>
-</div>
 </div>
 
 <?php include('partials/footer.php') ?>

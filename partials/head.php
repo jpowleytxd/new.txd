@@ -13,6 +13,7 @@ $page = $page . '-page';
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1.0 user-scalable=no">
+  <meta name="theme-color" content="#444866">
   <meta charset="UTF-8">
 
   <title>TXD | Digital Marketing Technology</title>

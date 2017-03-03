@@ -16,7 +16,7 @@
       Blog
       <span>Read all about it</span>
     </a> -->
-    <a href="about.php">
+    <a href="/newtxd/about.php">
       About TXD
       <span>What we're all about</span>
     </a>

@@ -4,10 +4,9 @@
   position: relative;
   float: left;
   text-align: center;
-  min-height: 100vh;
+  min-height: 20vh;
   bottom: 0;
   position: relative;
-  overflow: hidden;
 }
 .footer button {
   padding: 10px 15px;
@@ -154,6 +153,10 @@ color: rgb(50, 50, 50);
 }
 
 @media screen and (max-width: 480px){
+  .footer{
+    min-height: 500px;
+  }
+
   .footer-left{
     width: 100%;
     height: auto;

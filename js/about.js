@@ -144,4 +144,30 @@ $(document).ready(function(){
   	}
   });
 
+  // Smooth scrolling to anchor links
+  $('.down').on('click', function(event) {
+  		var target = '#' + $(this).data('scroll');
+  		target     = $(target);
+  		target = target.length ? target : $('[id=' + this.hash.slice(1) +']');
+  			 if (target.length) {
+  				 $('html,body').animate({
+  						 scrollTop: target.offset().top
+  				}, 750);
+  				return false;
+  		}
+  });
+
+  // Smooth scrolling to anchor links
+  $('.up').on('click', function(event) {
+  		var target = '#' + $(this).data('scroll');
+  		target     = $(target);
+  		target = target.length ? target : $('[id=' + this.hash.slice(1) +']');
+  			 if (target.length) {
+  				 $('html,body').animate({
+  						 scrollTop: target.offset().top
+  				}, 750);
+  				return false;
+  		}
+  });
+
 });

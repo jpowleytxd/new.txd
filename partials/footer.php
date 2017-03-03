@@ -1,13 +1,13 @@
-<!-- <footer> -->
-<div class="footer">
+
+<div class="footer" id="footer">
   <div class="footer-left">
     <p class="footer-left-title">
       Getting Around:
     </p>
-    <a href="/" class="footer-left-link">
+    <a href="/newtxd/" class="footer-left-link">
       Home
     </a>
-    <a href="/about.php" class="footer-left-link">
+    <a href="/newtxd/about.php" class="footer-left-link">
       About Us
     </a>
     <a href="#" class="footer-left-link" id="footer-contact-us">
@@ -35,8 +35,6 @@
   </div>
   <button type="button" class="zonal-family-button">Part of the Zonal Family</button>
 </div>
-<!-- </footer>
-
 </body>
 
-</html> -->
+</html>
